@@ -4,8 +4,6 @@ export const predictImage = async (req, res) => {
   try {
     const { image } = req.body;
 
-    console.log(image);
-
     if (!image) return res.status(400).send("No image");
     let cleansedImage = image.replace(/^data:image\/\w+;base64,/, "");
 
